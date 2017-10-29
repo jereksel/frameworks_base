@@ -36,6 +36,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.IRestrictionsManager;
 import android.content.RestrictionsManager;
+import android.content.om.IInterfacerManager;
 import android.content.pm.IShortcutService;
 import android.content.pm.LauncherApps;
 import android.content.pm.ShortcutManager;
@@ -145,6 +146,7 @@ import com.android.internal.app.ISoundTriggerService;
 import com.android.internal.appwidget.IAppWidgetService;
 import com.android.internal.os.IDropBoxManagerService;
 import com.android.internal.policy.PhoneLayoutInflater;
+import android.content.om.InterfacerManager;
 
 import java.util.HashMap;
 
@@ -863,6 +865,13 @@ final class SystemServiceRegistry {
                 return new VrManager(IVrManager.Stub.asInterface(b));
             }
         });
+
+        registerService(Context.INTERFACER_SERVICE, InterfacerManager.class, new CachedServiceFetcher<InterfacerManager>() {
+            @Override
+            public InterfacerManager createService(ContextImpl ctx) throws ServiceNotFoundException {
+                IBinder b = ServiceManager.getServiceOrThrow(Context.INTERFACER_SERVICE);
+                return new InterfacerManager(ctx.getOuterContext(), IInterfacerManager.Stub.asInterface(b));
+            }});
     }
 
     /**

@@ -1305,6 +1305,12 @@
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_useFingerprint">Allows the app to use fingerprint hardware for authentication</string>
 
+    <string name="permlab_interfacerOverlay">modify overlays</string>
+    <string name="permdesc_interfacerOverlay">Allows them app to enable and disable installed overlays</string>
+
+    <string name="permlab_interfacerApps">install and remove apps</string>
+    <string name="permdesc_interfacerApps">Allows them app to install and remove apps without user interaction</string>
+
     <!-- Message shown during fingerprint acquisision when the fingerprint cannot be recognized -->
     <string name="fingerprint_acquired_partial">Partial fingerprint detected. Please try again.</string>
     <!-- Message shown during fingerprint acquisision when the fingerprint cannot be recognized -->

@@ -23,8 +23,6 @@ import android.os.Parcelable;
 /**
  * Immutable overlay information about a package. All PackageInfos that
  * represent an overlay package will have a corresponding OverlayInfo.
- *
- * @hide
  */
 public final class OverlayInfo implements Parcelable {
     /**

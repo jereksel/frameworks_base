@@ -3977,6 +3977,8 @@ public abstract class Context {
     @SystemApi
     public static final String VR_SERVICE = "vrmanager";
 
+    public static final String INTERFACER_SERVICE = "interfacer";
+
     /**
      * Determine whether the given permission is allowed for a particular
      * process and user ID running in the system.

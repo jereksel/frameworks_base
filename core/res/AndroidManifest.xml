@@ -3417,6 +3417,16 @@
     <permission android:name="android.permission.INSTANT_APP_FOREGROUND_SERVICE"
         android:protectionLevel="signature|development|ephemeral|appop" />
 
+    <permission android:name="interfacer.permission.MODIFY_OVERLAY"
+                android:label="@string/permlab_interfacerOverlay"
+                android:description="@string/permdesc_interfacerOverlay"
+                android:protectionLevel="dangerous" />
+
+    <permission android:name="interfacer.permission.MODIFY_APPS"
+                android:label="@string/permlab_interfacerApps"
+                android:description="@string/permdesc_interfacerApps"
+                android:protectionLevel="dangerous" />
+
     <application android:process="system"
                  android:persistent="true"
                  android:hasCode="false"
